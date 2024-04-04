@@ -1,0 +1,17 @@
+public static void main(String[] args) {
+        //check if there is a file path
+        if (args.length < 1) {
+            return;//exit the program if no file
+        }
+        File file = new File(args[0]); // create the file object
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            Scanner in = new Scanner(file);
+            String line;
+            while(in.hasNextLine()) {
+                line = in.nextLine();
+            }
+        } catch (IOException e) {
+            System.err.println("error reading file " + e.getMessage());// print an error if the file cant be read
+        }
+    }
