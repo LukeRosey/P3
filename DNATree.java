@@ -17,7 +17,7 @@ public class DNATree {
     }
 
     public void insert(String dna) {
-    	System.out.println(root.insert(dna));
+    	System.out.println(root.insert(dna, 0));
     }
 
 }
