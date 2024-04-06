@@ -1,0 +1,23 @@
+public void print(){
+        if(root == null){
+            Printed(root, 0);
+        }
+    }
+    private void Printed(Node root, int level){
+        String spaces = "";
+        for (int i = 0; i < level; i++){
+            spaces+= "  ";
+        }
+        if (level == 0){
+            System.out.println("tree dump");
+        }
+        if(root == null){
+            System.out.println("E");
+        }
+        else if(root.isLeaf()){
+            System.out.println(spaces + root);
+        }
+        else{
+            System.out.println(spaces + "I");
+        }
+    }
